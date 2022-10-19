@@ -1,0 +1,29 @@
+<div class="">
+  <div class="container">
+    <ul class="list-group mt-3">
+      <li
+        *ngFor="let task of allTasks"
+        class="list-group-item"
+        [ngClass]="{ 'bg-warning': task.isCompleted == true }"
+      >
+        <div class="d-flex justify-content-between">
+          <p>{{ task.name }}</p>
+          <div class="buttons">
+            <button
+              (click)="handleComlpleted(task.name)"
+              class="btn btn-outline-success"
+            >
+              done
+            </button>
+            <button
+              (click)="handleDelete(task.name)"
+              class="btn btn-outline-danger ms-3"
+            >
+              delete
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

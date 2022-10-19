@@ -1,0 +1,6 @@
+<app-todo-form (taskAdded)="triggerEvInParent($event)"></app-todo-form>
+<app-todo-list
+  [allTasks]="allTasks"
+  (taskDelete)="taskDelete($event)"
+  (taskComplete)="taskComlete($event)"
+></app-todo-list>

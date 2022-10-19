@@ -1,0 +1,13 @@
+<section class="form bg-info py-5">
+  <div class="container">
+    <h1 class="text-center mb-5">To DO App</h1>
+    <input
+      type="text"
+      class="form-control mb-2"
+      placeholder="enter the task"
+      [(ngModel)]="task"
+    />
+    <button (click)="handleAddTask()" class="btn btn-danger">Add</button>
+    <p class="text-danger" *ngIf="!isValid">you have to enter a task</p>
+  </div>
+</section>
